@@ -1,0 +1,20 @@
+[
+    {
+        "prenom": "taha",
+        "age": 30,
+        "salaire": 15000,
+        "salaireNet": 12000.0
+    },
+    {
+        "prenom": "ilyas",
+        "age": 25,
+        "salaire": 12000,
+        "salaireNet": 9600.0
+    },
+    {
+        "prenom": "mohamed",
+        "age": 28,
+        "salaire": 13000,
+        "salaireNet": 10400.0
+    }
+]

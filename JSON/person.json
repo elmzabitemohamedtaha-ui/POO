@@ -1,0 +1,6 @@
+{
+    "numero": 1,
+    "nome": "Mario Rossi",
+    "estdeplome":true,
+    "loisirs": ["football", "cinema", "lecture"]
+}
