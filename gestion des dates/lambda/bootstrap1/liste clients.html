@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tableau</title>
+        <meta charset="UTF-8"/>
+        <style>
+            table{
+               border-collapse: collapse;
+               text-align: center;
+               align-items: center;
+            }
+            td{ 
+                padding: 3px;
+            }
+            .foot{
+                text-align: center;
+            }
+
+        </style>
+    </head>
+       
+    <body>
+        <form>
+        <table class="table"  border="1px";>
+            <thead><tr><th  >Nom</th><th >Prenom</th><th>Email</th><th></th> </th><th>Tel</th><th>Action</th></tr></thead>
+            <tr><td > <input type="text" value="Ilyass"> </td><td><input type="text" value="Ennaqui"></td><td><input type="email" value="ilyassennaqui@gmail.com"></td><td><input type="number" value="18"></td><td><input type="number" value="0634964272"></td><td><button class="edit-btn">Modifier</button></td></tr>
+            <tr><td > <input type="text" value="Mohamed Taha"> </td><td><input type="text" value="Elmzabite"></td><td><input type="email" value="Elmzabite@gmail.com"></td><td><input type="number" value="17"></td><td><input type="number" value="0444444444"></td><td><button class="edit-btn">Modifier</button></td></tr>
+            <tr><td > <input type="text" placeholder="Nom" required> </td><td><input type="text" placeholder="prenom" required></td><td><input type="email" placeholder="email" pattern="^[a-zA-Z\w.-]+@[A-Za-z\w.-]+\.[a-zA-Z]{2,}$"></td><td><input type="number" placeholder="Age" maxlength="120" minlength="1"></td><td><input type="text" placeholder="telephone" pattern="(06|05|07)[0-9]{8}$"></td><td><button type="submit" class="edit-btn">ajouter</button></td></tr>
+            <tr><td class="foot" colspan="6"  >Bienvenue dans notre socièté</td></tr> 
+        </table>
+        </form>
+    </body>    
+</html>    
+<!-----un formulaire est une section d'un document web qui permet à un utilisateur  de fournir des information via des controles interactifs----/>

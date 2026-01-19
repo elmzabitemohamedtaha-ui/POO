@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAJI MODE - Vêtements Marocains Traditionnels</title>
+    <link rel="stylesheet" href="nezha.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">👑</span>
+                <span class="logo-text">NAJI MODE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#collections" class="nav-link">Collections</a></li>
+                <li><a href="#produits" class="nav-link">Produits</a></li>
+                <li><a href="#apropos" class="nav-link">À Propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-image-background">
+            <img src="./NAJI MODE.jpeg" alt="NAJI MODE Background" class="hero-bg-image">
+        </div>
+        <div class="hero-content">
+            <h1>NAJI MODE</h1>
+            <p class="subtitle">Découvrez l'élégance et la tradition des vêtements marocains</p>
+            <p class="tagline">Les plus belles tenues traditionnelles pour femmes modernes</p>
+            <button class="btn btn-primary" onclick="document.getElementById('collections').scrollIntoView({behavior: 'smooth'})">
+                Découvrez nos collections
+            </button>
+        </div>
+        <div class="hero-background">
+            <div class="geometric-pattern"></div>
+        </div>
+    </section>
+
+    <!-- Section Collections -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2>Nos Collections</h2>
+            <div class="collections-grid">
+                <!-- Collection 1: Caftans -->
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://via.placeholder.com/300x300?text=Caftans+Luxe" alt="Caftans">
+                        <div class="collection-overlay">
+                            <button class="btn btn-small">Voir collection</button>
+                        </div>
+                    </div>
+                    <h3>Caftans Luxe</h3>
+                    <p>Caftans brodés avec des designs élégants et intemporels</p>
+                </div>
+
+                <!-- Collection 2: Djellabas -->
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://via.placeholder.com/300x300?text=Djellabas+Chic" alt="Djellabas">
+                        <div class="collection-overlay">
+                            <button class="btn btn-small">Voir collection</button>
+                        </div>
+                    </div>
+                    <h3>Djellabas Chic</h3>
+                    <p>Djellabas modernes avec une touche de sophistication</p>
+                </div>
+
+                <!-- Collection 3: Takchitas -->
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://via.placeholder.com/300x300?text=Takchitas+Premium" alt="Takchitas">
+                        <div class="collection-overlay">
+                            <button class="btn btn-small">Voir collection</button>
+                        </div>
+                    </div>
+                    <h3>Takchitas Premium</h3>
+                    <p>Takchitas de cérémonie avec des finitions exceptionnelles</p>
+                </div>
+
+                <!-- Collection 4: Kaftans Côtier -->
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://via.placeholder.com/300x300?text=Kaftans+Côtier" alt="Kaftans Côtier">
+                        <div class="collection-overlay">
+                            <button class="btn btn-small">Voir collection</button>
+                        </div>
+                    </div>
+                    <h3>Kaftans Côtier</h3>
+                    <p>Style côtier inspiré des villes balnéaires marocaines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits Vedettes -->
+    <section id="produits" class="products">
+        <div class="container">
+            <h2>Nos Produits Vedettes</h2>
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250x280?text=Caftan+Bleu" alt="Caftan Bleu Royal">
+                        <span class="badge">Populaire</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Caftan Bleu Royal</h3>
+                        <p class="description">Caftan traditionnel en velours bleu avec broderies dorées</p>
+                        <div class="product-details">
+                            <span class="material">🧵 Velours Premium</span>
+                            <span class="handmade">🎨 Brodé à la main</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">299.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250x280?text=Djellaba+Crème" alt="Djellaba Crème">
+                        <span class="badge">Nouveau</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Djellaba Crème</h3>
+                        <p class="description">Djellaba moderne en lin blanc avec capuche brodée</p>
+                        <div class="product-details">
+                            <span class="material">🧵 Lin naturel</span>
+                            <span class="handmade">🎨 Broderie traditionnelle</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">199.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250x280?text=Takchita+Rouge" alt="Takchita Rouge">
+                        <span class="badge">Luxe</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Takchita Rouge Festive</h3>
+                        <p class="description">Takchita rouge éclatant pour les occasions spéciales</p>
+                        <div class="product-details">
+                            <span class="material">🧵 Soie et dentelle</span>
+                            <span class="handmade">🎨 Couture artisanale</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">449.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250x280?text=Caftan+Vert" alt="Caftan Vert">
+                        <span class="badge">Promo -20%</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Caftan Vert Émeraude</h3>
+                        <p class="description">Caftan élégant en taffetas vert avec perles incrustées</p>
+                        <div class="product-details">
+                            <span class="material">🧵 Taffetas</span>
+                            <span class="handmade">🎨 Détails perlés</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">239.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250x280?text=Jabador+Noir" alt="Jabador Noir">
+                    </div>
+                    <div class="product-info">
+                        <h3>Jabador Noir Élégant</h3>
+                        <p class="description">Jabador noir raffiné pour accompagner vos caftans</p>
+                        <div class="product-details">
+                            <span class="material">🧵 Mousseline</span>
+                            <span class="handmade">🎨 Broderie dorée</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">149.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/250x280?text=Ceinture+Traditionnelle" alt="Ceinture">
+                        <span class="badge">Accessoire</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ceinture Traditionnelle</h3>
+                        <p class="description">Ceinture tissée dorée pour parfaire votre tenue</p>
+                        <div class="product-details">
+                            <span class="material">🧵 Tissu brocart</span>
+                            <span class="handmade">🎨 Motifs géométriques</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">59.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>À Propos de NAJI MODE</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Notre Histoire</h3>
+                    <p>
+                        NAJI MODE est née de la passion pour la culture marocaine et l'art traditionnel. 
+                        Depuis 2015, nous nous engageons à préserver et promouvoir la richesse du patrimoine 
+                        textile marocain en proposant des vêtements authentiques et de qualité exceptionnelle.
+                    </p>
+                    <p>
+                        Chaque pièce de notre collection est sélectionnée avec soin auprès d'artisans 
+                        marocains talentueux qui perpétuent les traditions séculaires de la broderie 
+                        et de la couture.
+                    </p>
+                    <h3>Notre Engagement</h3>
+                    <ul class="values-list">
+                        <li>✨ Authenticité et tradition</li>
+                        <li>✨ Qualité des matériaux</li>
+                        <li>✨ Soutien aux artisans locaux</li>
+                        <li>✨ Service client personnalisé</li>
+                        <li>✨ Livraison rapide et sécurisée</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x350?text=Artisans+Marocains" alt="Artisans Marocains">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Témoignages de nos Clients</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "J'ai commandé un caftan magnifique! La qualité est exceptionnelle et la broderie 
+                        est un vrai chef-d'œuvre. Je recommande vivement!"
+                    </p>
+                    <p class="testimonial-author">- Fatima M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Service impeccable et livraison rapide. C'est ma troisième commande et je suis 
+                        toujours aussi satisfaite!"
+                    </p>
+                    <p class="testimonial-author">- Amina L.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Les vêtements sont magnifiques et authentiques. C'est exactement ce que je cherchais 
+                        pour ma fille!"
+                    </p>
+                    <p class="testimonial-author">- Yasmine B.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Nous Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3>📍 Adresse</h3>
+                        <p>NAJI MODE<br>ANDALOUS <br>BOUSKOURA , Maroc</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>📞 Téléphone</h3>
+                        <p>+212 6 70 70 51 41<br>Du dimanche au jeudi: 9h-19h<br>Vendredi: 14h-19h</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:info@nezhashop.ma">NAJINEZHA@nezhashop.ma</a><br>Réponse sous 24h</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>📱 Réseaux Sociaux</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📘 Facebook</a>
+                            <a href="#" class="social-icon">📷 Instagram</a>
+                            <a href="#" class="social-icon">💬 WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <ul>
+                        <li><a href="#apropos">Qui sommes-nous?</a></li>
+                        <li><a href="#">Nos artisans</a></li>
+                        <li><a href="#">Notre histoire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">Garantie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn btn-small">S'abonner</button>
+                    </form>
+                <!--
+                    This section marks the end of a container or content block in the nezha.html file.
+                    It is likely used to close a previously opened <div> element, helping to structure the layout.
+                    Ensure that all opened HTML tags are properly closed to maintain valid markup.
+                -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NAJI MODE - Tous les droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nezha.js"></script>
+</body>
+</html>

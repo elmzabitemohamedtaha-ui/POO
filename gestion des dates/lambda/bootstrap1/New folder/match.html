@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Match: Elmzabite vs Equipe Deux (5v5)</title>
+  <style>
+    :root{--bg:#f4f6fb;--card:#ffffff;--accent:#007bff;--muted:#6c757d}
+    body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);margin:0;padding:24px;color:#222}
+    .container{max-width:1000px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    h1{font-size:20px;margin:0}
+    .match-card{background:var(--card);border-radius:10px;padding:18px;box-shadow:0 6px 20px rgba(10,10,20,0.06)}
+    .teams{display:flex;gap:12px;flex-wrap:wrap}
+    .team{flex:1 1 320px;padding:12px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid #eef2f7}
+    .team h2{margin:0 0 8px;font-size:16px;color:var(--accent)}
+    .players{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .player-input{display:flex;flex-direction:column}
+    .player-input label{font-size:12px;color:var(--muted);margin-bottom:4px}
+    .player-input input{padding:8px;border-radius:6px;border:1px solid #dfe6ef}
+    .controls{display:flex;gap:8px;align-items:center;margin-top:14px}
+    button{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+    button.secondary{background:#6c757d}
+    #lineups{margin-top:16px;padding:12px;background:#fff;border-radius:8px;border:1px dashed #e6eef8}
+    .lineup{display:flex;gap:12px;flex-wrap:wrap}
+    .col{flex:1 1 220px}
+    .col h3{margin:0 0 8px}
+    ul{padding-left:18px;margin:0}
+    .note{font-size:13px;color:var(--muted);margin-top:10px}
+    @media (max-width:640px){.players{grid-template-columns:1fr}
+      .controls{flex-direction:column;align-items:stretch}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Match amical: <strong>Elmzabite</strong> vs <strong>Equipe Deux</strong></h1>
+      <small class="note">Entrez les noms des joueurs (5 par équipe) puis cliquez sur «Afficher la composition».</small>
+    </header>
+
+    <section class="match-card">
+      <div class="teams">
+        <div class="team" id="team1">
+          <h2>Elmzabite</h2>
+          <div class="players">
+            <div class="player-input"><label for="t1p1">Joueur 1</label><input id="t1p1" maxlength="40" placeholder="Nom Joueur 1" /></div>
+            <div class="player-input"><label for="t1p2">Joueur 2</label><input id="t1p2" maxlength="40" placeholder="Nom Joueur 2" /></div>
+            <div class="player-input"><label for="t1p3">Joueur 3</label><input id="t1p3" maxlength="40" placeholder="Nom Joueur 3" /></div>
+            <div class="player-input"><label for="t1p4">Joueur 4</label><input id="t1p4" maxlength="40" placeholder="Nom Joueur 4" /></div>
+            <div class="player-input"><label for="t1p5">Joueur 5</label><input id="t1p5" maxlength="40" placeholder="Nom Joueur 5" /></div>
+          </div>
+        </div>
+
+        <div class="team" id="team2">
+          <h2>Equipe Deux</h2>
+          <div class="players">
+            <div class="player-input"><label for="t2p1">Joueur 1</label><input id="t2p1" maxlength="40" placeholder="Nom Joueur 1" /></div>
+            <div class="player-input"><label for="t2p2">Joueur 2</label><input id="t2p2" maxlength="40" placeholder="Nom Joueur 2" /></div>
+            <div class="player-input"><label for="t2p3">Joueur 3</label><input id="t2p3" maxlength="40" placeholder="Nom Joueur 3" /></div>
+            <div class="player-input"><label for="t2p4">Joueur 4</label><input id="t2p4" maxlength="40" placeholder="Nom Joueur 4" /></div>
+            <div class="player-input"><label for="t2p5">Joueur 5</label><input id="t2p5" maxlength="40" placeholder="Nom Joueur 5" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="showBtn">Afficher la composition</button>
+        <button class="secondary" id="resetBtn" type="button">Réinitialiser</button>
+        <div style="margin-left:auto;color:var(--muted);font-size:13px">Format: 5 vs 5</div>
+      </div>
+
+      <div id="lineups" aria-live="polite" hidden>
+        <!-- Les compositions apparaîtront ici -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function collectPlayers(prefix){
+      const players = [];
+      for(let i=1;i<=5;i++){
+        const el = document.getElementById(prefix + i);
+        players.push(el && el.value.trim() ? el.value.trim() : '(vide)');
+      }
+      return players;
+    }
+
+    function renderLineups(){
+      const t1 = collectPlayers('t1p');
+      const t2 = collectPlayers('t2p');
+      const container = document.getElementById('lineups');
+      container.hidden = false;
+      container.innerHTML = `
+        <div class="lineup">
+          <div class="col">
+            <h3>Elmzabite</h3>
+            <ul>
+              ${t1.map((p,i)=>`<li>${i+1}. ${escapeHtml(p)}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Equipe Deux</h3>
+            <ul>
+              ${t2.map((p,i)=>`<li>${i+1}. ${escapeHtml(p)}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
+    // Simple échappement pour éviter l'injection HTML
+    function escapeHtml(str){
+      return str.replace(/[&<>"']/g, function(m){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m];});
+    }
+
+    document.getElementById('showBtn').addEventListener('click', function(){
+      renderLineups();
+      // scroll léger vers le résultat
+      document.getElementById('lineups').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', function(){
+      // vider tous les inputs t1p* et t2p*
+      for(let i=1;i<=5;i++){document.getElementById('t1p'+i).value='';document.getElementById('t2p'+i).value='';}
+      const container = document.getElementById('lineups');container.hidden=true;container.innerHTML='';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vêtements de Sport</title>
+    <link rel="stylesheet" href="projet.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MOHAMED TAHA CR7</div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#marche" class="nav-link">Marché</a></li>
+                <li><a href="#apropos" class="nav-link">À Propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue chez SportWear</h1>
+            <p>Les meilleurs vêtements de sport pour votre performance</p>
+            <button class="btn btn-primary" onclick="document.getElementById('marche').scrollIntoView({behavior: 'smooth'})">
+                Découvrez nos produits
+            </button>
+        </div>
+    </section>
+
+    <!-- Section Marché (Catalogue) -->
+    <section id="marche" class="marche">
+        <div class="container">
+            <h2>Notre Catalogue</h2>
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://www.sportsdirect.com/images/imgzoom/45/45107403_xxl.jpg" alt="T-Shirt Running">
+                    </div>
+                    <div class="product-info">
+                        <h3>T-Shirt Running Premium</h3>
+                        <p class="category">Running</p>
+                        <p class="description">Tissu respirant et léger pour vos séances de running</p>
+                        <div class="product-footer">
+                            <span class="price">49.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.ytimg.com/vi/6DQOv05LjkU/maxresdefault.jpg" alt="Legging Sport">
+                    </div>
+                    <div class="product-info">
+                        <h3></h3>
+                        <p class="category">FOOTBALL</p>
+                        <p class="description">FOOT</p>
+                        <div class="product-footer">
+                            <span class="price">59.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.P0URTwg816Sy9oGrjOZ0WAHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Veste Yoga">
+                    </div>
+                    <div class="product-info">
+                        <h3>SACS DE SPORT</h3>
+                        <p class="category">SPORT</p>
+                        <p class="description">SACS DE SPORT</p>
+                        <div class="product-footer">
+                            <span class="price">69.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://thumblr.uniid.it/product/396996/b46ec4d7075b.jpg?width=1920" alt="Short Training">
+                    </div>
+                    <div class="product-info">
+                        <h3>CHAUSSURES DE FOOTBALL</h3>
+                        <p class="category">Training</p>
+                        <p class="description">CHAUSSURES DE FOOTBALL</p>
+                        <div class="product-footer">
+                            <span class="price">39.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://www.foot.fr/68985-large_default/tenue-junior-real-madrid-exterieur-2020-21.jpg" alt="Chaussettes Sport">
+                    </div>
+                    <div class="product-info">
+                        <h3>TENUE DE FOOTBALL</h3>
+                        <p class="category">Accessoires</p>
+                        <p class="description">TENUE DE FOOTBALL</p>
+                        <div class="product-footer">
+                            <span class="price">14.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/474x/9c/91/45/9c9145d56c56eee0524cee204d99ee8d.jpg" alt="Soutien-gorge Sport">
+                    </div>
+                    <div class="product-info">
+                        <h3>TENUE DE SPORT HOMME</h3>
+                        <p class="category">hommes</p>
+                        <p class="description">TENUE DE SPORT HOMME</p>
+                        <div class="product-footer">
+                            <span class="price">54.99€</span>
+                            <button class="btn btn-small">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>À Propos de SportWear</h2>
+            <div class="about-content">
+                <div class="about-text">
+
+
+                    <h3>Nos valeurs</h3>
+                    <ul class="values-list">
+                        <li>✓ Qualité Premium</li>
+                        <li>✓ Confort et Performance</li>
+                        <li>✓ Durabilité Écologique</li>
+                        <li>✓ Service Client Excellent</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="./FOOT.jpg" alt="SportWear Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Nous Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3>📍 Adresse</h3>
+                        <p>Avenue du Sport de taha<br>bouskoura</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>📞 Téléphone</h3>
+                        <p>+212 691366836<br>Du lundi au vendredi: 9h-18h</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:contact@sportwear.fr">elmzabitemohamedtaha@gmail.com</a><br>Réponse sous 24h</p>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SportWear - Tous les droits réservés</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/?locale=fr_FR" class="social">Facebook</a>
+                <a href="https://www.instagram.com/" class="social">Instagram</a>
+                <a href="https://x.com/" class="social">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="projet.js"></script>
+</body>
+</html>

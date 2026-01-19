@@ -1,0 +1,15 @@
+.co {
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid 2px rgba(6, 248, 127, 0.89);
+    text-align: center;
+    width: 300px;
+    margin: 50px auto;
+    padding: 40px;
+
+}
+h1 {
+    color: rgb(10, 252, 159);
+}

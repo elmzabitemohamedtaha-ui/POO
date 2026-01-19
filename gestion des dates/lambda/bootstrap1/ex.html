@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex.css">
+    <title>Formulaire d'Inscription - Mohamed</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1>Bienvenue Mohamed</h1>
+                <p>Remplissez ce formulaire pour vous inscrire</p>
+            </div>
+
+            <form id="inscriptionForm" onsubmit="handleSubmit(event)">
+
+
+
+
+
+                <!-- Champ NOM -->
+                <div class="form-group">
+                    <label for="nom">NOM:</label>
+                    <input 
+                        type="text" 
+                        id="nom" 
+                        name="nom" 
+                        placeholder="Entrer votre nom" 
+                        required
+                        maxlength="50"
+                        onkeyup="updateCharCount(this, 'nomCount')"
+                    >
+                    <small id="nomCount" class="char-counter">0/50</small>
+                    <span class="error-message" id="nomError"></span>
+                </div>
+                <!-- Champ PRENOM -->
+                <div class="form-group">
+                    <label for="prenom">PRENOM:</label>
+                    <input 
+                        type="text" 
+                        id="prenom" 
+                        name="prenom" 
+                        placeholder="Entrer votre prénom" 
+                        required
+                        maxlength="50"
+                        onkeyup="updateCharCount(this, 'prenomCount')"
+                    >
+                    <small id="prenomCount" class="char-counter">0/50</small>
+                    <span class="error-message" id="prenomError"></span>
+                </div>
+                <!-- Champ EMAIL -->
+                <div class="form-group">
+                    <label for="email">EMAIL:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Entrer votre email" 
+                        required
+                        maxlength="100"
+                        onkeyup="updateCharCount(this, 'emailCount')"
+                    >
+                    <small id="emailCount" class="char-counter">0/100</small>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <!-- Champ DATE DE NAISSANCE -->
+                <div class="form-group">
+                    <label for="dateNaissance">DATE DE NAISSANCE:</label>
+                    <input 
+                        type="date" 
+                        id="dateNaissance" 
+                        name="dateNaissance" 
+                        required
+                    >
+                    <span class="error-message" id="dateError"></span>
+                </div>
+
+                <!-- Champ GENRE -->
+                <div class="form-group">
+                    <label>GENRE:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="genre" value="homme"> Homme
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="genre" value="femme"> Femme
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="genre" value="autre"> Autre
+                        </label>
+                    </div>
+                    <span class="error-message" id="genreError"></span>
+                </div>
+
+                <!-- Champ TELEPHONE -->
+                <div class="form-group">
+                    <label for="telephone">TELEPHONE:</label>
+                    <input 
+                        type="tel" 
+                        id="telephone" 
+                        name="telephone" 
+                        placeholder="Entrer votre numéro"
+                        pattern="[0-9\s\-\+\(\)]+"
+                    >
+                    <span class="error-message" id="telError"></span>
+                </div>
+
+                <!-- Champ ADRESSE -->
+                <div class="form-group">
+                    <label for="adresse">ADRESSE:</label>
+                    <textarea 
+                        id="adresse" 
+                        name="adresse" 
+                        placeholder="Entrer votre adresse complète"
+                        rows="3"
+                        maxlength="200"
+                        onkeyup="updateCharCount(this, 'adresseCount')"
+                    ></textarea>
+                    <small id="adresseCount" class="char-counter">0/200</small>
+                </div>
+
+                <!-- Champ MOT DE PASSE -->
+                <div class="form-group">
+                    <label for="password">MOT DE PASSE:</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Créer un mot de passe" 
+                        required
+                        maxlength="30"
+                        onkeyup="checkPassword(this)"
+                    >
+                    <small id="passwordCount" class="char-counter">0/30</small>
+                    <div class="password-strength" id="passwordStrength"></div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <!-- Champ CONFIRMATION MOT DE PASSE -->
+                <div class="form-group">
+                    <label for="confirmPassword">CONFIRMER MOT DE PASSE:</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        placeholder="Confirmer votre mot de passe" 
+                        required
+                    >
+                    <span class="error-message" id="confirmError"></span>
+                </div>
+
+                <!-- Champ CONDITIONS -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="conditions" name="conditions" required>
+                        J'accepte les conditions d'utilisation
+                    </label>
+                    <span class="error-message" id="conditionsError"></span>
+                </div>
+
+                <!-- Boutons -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Valider et S'inscrire</button>
+                    <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+                </div>
+
+                <!-- Message de succès -->
+                <div class="success-message" id="successMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="ex.js"></script>
+</body>
+</html>

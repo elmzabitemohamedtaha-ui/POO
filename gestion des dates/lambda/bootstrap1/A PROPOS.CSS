@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+}
+p{
+    font-size: 20px;
+    color: rgb(14, 13, 13);
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}

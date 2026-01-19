@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 50px auto;
+        }
+        label{
+            margin-bottom: 10px;
+            font-weight: bold;
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="password"]{
+            padding: 8px;
+            margin-bottom: 20px;
+            border:1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"]{
+            padding: 10px;
+            background-color: #28a745;
+            color:white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: #218838
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .form-actions{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+
+    </style>
+    <title>page login</title>
+</head>
+<body>
+    <form>
+    <fieldset>
+    <div>
+    <label >nom:</label>
+    <input type="text" placeholder="nom" required>
+    </div>
+    <div>
+    <label>password:</label>
+     <input type="text" placeholder="password" required>
+     <div>
+        <select></select>
+
+
+     </div>
+      <button typ="submit" >valider</button>
+     <a href="#">mode de passe oublie?</a>
+    </div>
+
+    </form>
+    </fieldset>
+</body>
+</html>

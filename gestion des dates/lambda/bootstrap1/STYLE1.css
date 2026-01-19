@@ -1,0 +1,51 @@
+form{
+                display:flex;
+                flex-direction:column;
+                width: 300px;
+                margin:50px auto;
+            }
+            label{
+                margin-bottom:10px;
+                font-weight: bold;
+                width: 100%;
+            }
+            input[type="text"],
+            input[type="Password"]{
+                padding: 8px;
+                margin-bottom: 20px;
+                border:1px solid #ccc;
+                border-radius:4px;
+            }
+             input[type="submit"]{
+                padding:10px;
+                background-color: #28a745;
+                color:white;
+                border:none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover{
+                background-color: #218838;
+            }
+            div{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .form-actions{
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+            }
+            .form-option{
+               padding: 8px;
+                margin-bottom: 20px;
+                border:1px solid #ccc;
+                border-radius:4px;
+                width: 180px;
+            }
+            .liste_name{
+                width: 100px;
+            }
+        

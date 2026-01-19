@@ -1,0 +1,96 @@
+/* Style simple pour la page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Conteneurs des champs */
+div {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Champs d'entrée */
+.form-control {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #08eeee;
+    box-shadow: 0 0 5px rgba(7, 173, 250, 0.5);
+}
+
+/* Table */
+.table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #ffffff;
+}
+
+.table thead {
+    background-color: #0aadf8;
+    color: white;
+}
+
+.table th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Boutons dans la table */
+button {
+    background-color: #0fbec4;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Input dans la table */
+table input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 90%;
+}
+
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="LOGIN.CSS">
+    <title>Connexion - Plateforme</title>
+
+
+</head>
+<body>
+
+   
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Connexion</h1>
+            <p>Accédez à votre compte</p>
+        </div>
+
+
+        
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="nom">NOM:</label>
+                <input 
+                    id="NOM" 
+                    type="text" 
+                    placeholder="NOM" 
+                    maxlength="50"
+                    required
+                    onkeyup="checkCharLimit(this)"
+                >
+                <small id="NOMCount" class="char-count">0/50</small>
+                <div class="error-message" id="nomError"></div>
+
+                <label for="nom">PRENOM</label>
+                <input 
+                    id="PRENOM" 
+                    type="text" 
+                    placeholder="PRENOM" 
+                    maxlength="50"
+                    required
+                    onkeyup="checkCharLimit(this)"
+                >
+                <small id="PRENOMCount" class="char-count">0/50</small>
+                <div class="error-message" id="prenomError"></div>
+
+                <label for="email">Adresse Email</label>
+                <input 
+                    id="email" 
+                    type="email" 
+                    placeholder="votre@email.com" 
+                    maxlength="100"
+                    required
+                    onkeyup="checkCharLimit(this)"
+                >
+                <small id="emailCount" class="char-count">0/100</small>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input 
+                    id="password" 
+                    type="password" 
+                    placeholder="••••••••" 
+                    maxlength="30"
+                    required
+                    onkeyup="checkCharLimit(this)"
+                >
+                <small id="passwordCount" class="char-count">0/30</small>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <div class="form-options">
+                <div class="checkbox-wrapper">
+                    <input id="remember" type="checkbox">
+                    <label for="remember">Se souvenir de moi</label>
+                </div>
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Se connecter</button>
+
+            <div class="signup-link">
+                Pas de compte ? <a href="#">S'inscrire</a>
+            </div>
+        </form>
+
+        <div class="back-link">
+            <a href="taha/index.html">← Retour à l'accueil</a>
+        </div>
+    </div>
+
+
+    <script>
+
+        
+        // Fonction pour vérifier et afficher le nombre de caractères
+        function checkCharLimit(input) {
+            const maxLength = input.getAttribute('maxlength');
+            const currentLength = input.value.length;
+            const fieldId = input.id;
+            
+            // Obtenir l'élément pour afficher le compteur
+            const countElement = document.getElementById(fieldId + 'Count');
+            if (countElement) {
+                countElement.textContent = currentLength + '/' + maxLength;
+                
+                // Vérifier si on a dépassé la limite
+                if (currentLength >= maxLength) {
+                    // Créer ou mettre à jour le message d'alerte
+                    let alertBox = document.getElementById(fieldId + 'Alert');
+                    if (!alertBox) {
+                        alertBox = document.createElement('div');
+                        alertBox.id = fieldId + 'Alert';
+                        alertBox.className = 'max-limit-alert';
+                        input.parentNode.insertBefore(alertBox, input);
+                    }
+                    alertBox.textContent = '⚠️ MAXIMUM ATTEINT! Vous avez dépassé la limite de ' + maxLength + ' caractères';
+                    alertBox.style.display = 'block';
+                    countElement.style.color = '#ff0000';
+                    countElement.style.fontWeight = 'bold';
+                } else if (currentLength >= maxLength * 0.8) {
+                    // Approche de la limite (80%)
+                    let alertBox = document.getElementById(fieldId + 'Alert');
+                    if (alertBox) {
+                        alertBox.style.display = 'none';
+                    }
+                    countElement.style.color = '#ff6b6b';
+                    countElement.style.fontWeight = 'bold';
+                } else {
+                    // Loin de la limite
+                    let alertBox = document.getElementById(fieldId + 'Alert');
+                    if (alertBox) {
+                        alertBox.style.display = 'none';
+                    }
+                    countElement.style.color = '#666';
+                    countElement.style.fontWeight = 'normal';
+                }
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const nom = document.getElementById('NOM').value.trim();
+            const prenom = document.getElementById('PRENOM').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            const nomError = document.getElementById('nomError');
+            const prenomError = document.getElementById('prenomError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const loginBtn = event.target.querySelector('.login-btn');
+            
+            // Réinitialiser les messages d'erreur
+            nomError.style.display = 'none';
+            prenomError.style.display = 'none';
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+            
+            let isValid = true;
+            
+            // Validation NOM
+            if (!nom) {
+                nomError.textContent = 'Le nom est requis';
+                nomError.style.display = 'block';
+                isValid = false;
+            } else if (nom.length > 50) {
+                nomError.textContent = '❌ Vous avez dépassé la limite maximale de 50 caractères !';
+                nomError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validation PRENOM
+            if (!prenom) {
+                prenomError.textContent = 'Le prénom est requis';
+                prenomError.style.display = 'block';
+                isValid = false;
+            } else if (prenom.length > 50) {
+                prenomError.textContent = '❌ Vous avez dépassé la limite maximale de 50 caractères !';
+                prenomError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validation email
+            if (!email) {
+                emailError.textContent = 'L\'email est requis';
+                emailError.style.display = 'block';
+                isValid = false;
+            } else if (email.length > 100) {
+                emailError.textContent = '❌ Vous avez dépassé la limite maximale de 100 caractères !';
+                emailError.style.display = 'block';
+                isValid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.textContent = 'Veuillez entrer un email valide';
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validation mot de passe
+            if (!password) {
+                passwordError.textContent = 'Le mot de passe est requis';
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else if (password.length > 30) {
+                passwordError.textContent = '❌ Vous avez dépassé la limite maximale de 30 caractères !';
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else if (password.length < 6) {
+                passwordError.textContent = 'Le mot de passe doit contenir au moins 6 caractères';
+                passwordError.style.display = 'block';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                loginBtn.disabled = true;
+                loginBtn.textContent = 'Connexion en cours...';
+                
+                // Simulation d'une requête serveur (2 secondes)
+                setTimeout(() => {
+                    alert('Connexion réussie ! (Simulation)');
+                    // Vous pouvez rediriger vers une autre page ici
+                    // window.location.href = 'dashboard.html';
+                    loginBtn.disabled = false;
+                    loginBtn.textContent = 'Se connecter';
+                    document.getElementById('loginForm').reset();
+                    
+                    // Réinitialiser les compteurs de caractères
+                    document.getElementById('NOMCount').textContent = '0/50';
+                    document.getElementById('PRENOMCount').textContent = '0/50';
+                    document.getElementById('emailCount').textContent = '0/100';
+                    document.getElementById('passwordCount').textContent = '0/30';
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>

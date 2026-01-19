@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:40px;
+        }
+        .form-container{
+            width: 400px;
+        }
+        .form-group{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label{
+            width: 100px;
+            margin-right: 10px;
+        }
+        .form-group input[type="text"]
+        .form-group input[type="email"]
+        .form-group input[type="tel"]
+        .form-group input[type="number"]{
+            flex:1;
+            flex-direction: 8px;
+            box-sizing: border-box;
+        }
+        .radio-group{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+        .form-actions{
+            display: flex;
+            justify-content: flex-end;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border:none;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+        .cancel-button{
+            background-color: #6c757d;
+            margin-left: 10px;
+        }
+        .cancel-button:hover{
+            background-color: #576671;
+        }
+        .checkbox-group{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1><u>Profil1</u></h1>
+    <div class="form-container">
+        <form action="a" method="post">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input pattern="[A-Za-z0-9]" type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input  type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+/.[a-zA-Z]{2,}" type="email" id="email" name="email" required>
+            </div>
+             <div class="form-group">
+                <label for="Téléphone">Téléphone</label>
+                <input pattern="[0-9]{10}" type="tel" id="Téléphone" name="Téléphone" placeholder="0661618287" required>
+            </div>
+            <div class="form-group">
+                <label for="age ">Age</label>
+                <input  type="number" id="age" name="age" min="3" max="120" required>
+            </div>  
+            <div class="form-group">
+                <label for="Naissance ">Date de naissance</label>
+                <input  type="date" id="naissance" name="naissance" >
+            </div> 
+            <div class="form-group">
+                <label>sexe:</label>
+                <div class="radio-group">
+                <div>
+                    <input  type="radio" id="Homme" name="sexe" value="Homme" >
+                    <label for="Homme">Homme</label>
+                </div>
+                <div>
+                    <input  type="radio" id="Femme" name="sexe" value="Femme" >
+                    <label for="Femme">Femme</label>
+                </div>
+            </div>
+             </div>
+            <div class="form-group">
+                <label for="source">Comment avez-vous connu ce site?</label>
+             <div class="checkbox-group">
+                <label><input type="checkbox" name="source" value="Facebook">Facebook</label>
+                <label><input type="checkbox" name="source" value="LinkedIn">LinkedIn</label>
+                <label><input type="checkbox" name="source" value="instagram">instagram</label>
+             </div>
+            </div>
+           
+            <div class="form-actions">
+                <button type="submit">Valider</button>
+                <button type="reset" class="cancel-button">annuler</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

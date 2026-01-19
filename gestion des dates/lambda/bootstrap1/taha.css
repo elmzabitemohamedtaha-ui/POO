@@ -1,0 +1,94 @@
+.container input {
+    display: block;
+    width: 60%;
+}
+.btn1 {
+    width: 60%;
+    padding: 10px;
+    background-color: #a0a0a0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000000 !important;
+    font-weight: 700;
+    font-size: 1.rem;
+    letter-spacing: 2px;
+    transition: opacity, 0.3s ease;
+    display: inline-block;
+    align-items: center;
+    border: 1px solid #000000;
+}
+.btn1:hover {
+    opacity: 0.9;
+    background-color: #ffffff;
+    color: #000000;
+
+}
+.logo-link {
+    text-decoration: none;
+    color: #000000 !important;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    transition: opacity, 0.3s ease;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+.luxy-title {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.luxy-desc {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.luxy-title {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.luxy-desc {
+    font-size: 20px;
+    color: #555;
+    font-style: italic;
+    width: 80%;
+}
+
+.btn1 {
+    background-color: rgb(252, 252, 252);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.btn1:hover {
+    opacity: 0.8;
+}
+
+input{
+    width: 100%;
+}
+

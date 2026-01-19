@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tableau </title>
+         <style>
+            body{
+                margin: 50px
+            }
+            
+            table {
+               border-collapse: collapse;
+               width: 30%;
+            }
+             th, td {
+               border: 1px solid;
+               padding: 8px 8px;
+               text-align: center;
+            }
+            input{
+                width: 80px;
+            }
+    </style>
+    </head>
+    <body>
+        <h2>Liste client:</h2>
+        <table>
+    <form action="#" method="get">
+      <tr> 
+        <th>Nom</th> 
+        <th>Prenom</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Telephone</th>
+        <th>Action</th>
+      </tr>
+    
+      <tr>
+        <td><input type="text" name="nom1" value="Dupon"></td>
+        <td><input type="text" name="prenom1"value="Jean"></td>
+        <td><input type="email" name="email1"value="X@gmail.com"></td>
+        <td><input type="number" name="age1" value="30"></td>
+        <td><input type="tel" name="tel1"value="04xxxxxxxx"></td>
+        <td><button type="submit">modifier</button></td>
+      </tr>
+       <tr>
+        <td><input type="text" name="nom2" value="martin" required></td>
+        <td><input type="text" name="prenom2" value="claire" required></td>
+        <td><input type="email" name="email2" value="Z@gmail.com"required></td>
+        <td><input type="number"  name="age2" value="40"required></td>
+        <td><input type="tel" name="tel2" value="06xxxxxxxx"required></td>
+        <td><button type="submit">modifier</button></td>
+      </tr>
+       <tr>
+        <td><input type="text" name="nom" placeholder="Nom" required></td>
+        <td><input type="text" name="prenom" placeholder="Prenom"required></td>
+        <td><input type="email" name="email" placeholder="email"required></td>
+        <td><input type="number" name="age"  placeholder="age"required></td>
+        <td><input type="tel" name="tel" placeholder="telephone"required pattern="^(05|06|07)[0-9]{8}$"></td>
+        <td><button type="submit" > Ajouter</button></td>
+      </tr>
+       <tr>
+        <td colspan="6">Bienvenue dans X</td>
+      </tr>
+    </form>
+  </table>
+  
+
+    </body>
+</html>
