@@ -50,8 +50,8 @@ class Club:
   def NombreMembres(self):
     return len(self.Lmembres)
   def IndiceDe(self, membre):
-    if membre in self.Lmembers:
-      return self.Lmembers.index(membre)
+    if membre in self.Lmembres:
+      return self.Lmembres.index(membre)
     else:
       return -1
   def ajouter(self, membre):
@@ -107,6 +107,7 @@ if __name__=='__main__':
   c.afficher()
   c.supprimer(s1)
   c.afficher()
+
   c.supprimer(199609150002)
   c.afficher()
   c.charger()
